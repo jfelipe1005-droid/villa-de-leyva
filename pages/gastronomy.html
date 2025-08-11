@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gastronomía de Villa de Leyva</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Georgia', serif;
+      line-height: 1.6;
+      color: #333;
+      background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: white;
+      box-shadow: 0 0 30px rgba(0,0,0,0.3);
+      min-height: 100vh;
+    }
+
+    header {
+      background: linear-gradient(rgba(255,140,0,0.8), rgba(255,165,0,0.8)), 
+                  url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300"><rect fill="%23ffa500" width="1200" height="300"/><circle fill="%23ff8c00" cx="200" cy="150" r="80"/><circle fill="%23ff7f50" cx="600" cy="100" r="60"/><circle fill="%23ffb347" cx="1000" cy="180" r="70"/></svg>') center/cover;
+      color: white;
+      padding: 3rem 2rem;
+      text-align: center;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+
+    .back-btn {
+      position: absolute;
+      top: 2rem;
+      left: 2rem;
+      background: rgba(255,255,255,0.2);
+      color: white;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      border-radius: 25px;
+      transition: background 0.3s ease;
+    }
+
+    .back-btn:hover {
+      background: rgba(255,255,255,0.3);
+    }
+
+    main {
+      padding: 2rem;
+    }
+
+    .intro-section {
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      padding: 2rem;
+      border-radius: 15px;
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+
+    .dishes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+
+    .dish-card {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .dish-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .dish-image {
+      height: 200px;
+      background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+    }
+
+    .dish-content {
+      padding: 1.5rem;
+    }
+
+    .dish-title {
+      color: #e67e22;
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .restaurants {
+      background: #2c3e50;
+      color: white;
+      padding: 3rem 2rem;
+      margin: 3rem 0;
+      border-radius: 15px;
+    }
+
+    .restaurants h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .restaurant-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .restaurant-card {
+      background: rgba(255,255,255,0.1);
+      padding: 1.5rem;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .restaurant-name {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      color: #f39c12;
+    }
+
+    .beverages {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin: 3rem 0;
+    }
+
+    .beverage-card {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 2rem;
+      border-radius: 15px;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      header {
+        padding: 2rem 1rem;
+      }
+
+      main {
+        padding: 1rem;
+      }
+
+      .dishes-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a href="../index.html" class="back-btn">← Volver</a>
+      <h1>🍽️ Gastronomía de Villa de Leyva</h1>
+      <p>Sabores tradicionales boyacenses en un ambiente colonial único</p>
+    </header>
+
+    <main>
+      <div class="intro-section">
+        <h2>Una Fusión de Tradición y Modernidad</h2>
+        <p>La gastronomía de Villa de Leyva combina los sabores ancestrales boyacenses con propuestas culinarias contemporáneas. Los restaurantes ubicados en casas coloniales ofrecen una experiencia gastronómica única, donde cada plato cuenta la historia de la región altiplana y sus tradiciones culinarias centenarias.</p>
+      </div>
+
+      <h2 style="text-align: center; color: #2c3e50; margin: 2rem 0;">Platos Típicos Tradicionales</h2>
+
+      <div class="dishes-grid">
+        <div class="dish-card">
+          <div class="dish-image">🥘</div>
+          <div class="dish-content">
+            <h3 class="dish-title">Cocido Boyacense</h3>
+            <p>Plato emblemático preparado con carne de res, cerdo, pollo, longaniza, papa criolla, mazorca, cubios, hibias y diferentes verduras. Se cocina lentamente en olla de barro para conservar todos los sabores.</p>
+          </div>
+        </div>
+
+        <div class="dish-card">
+          <div class="dish-image">🌽</div>
+          <div class="dish-content">
+            <h3 class="dish-title">Arepa de Maíz Pelao</h3>
+            <p>Arepa tradicional boyacense hecha con maíz pelado y sal. Se sirve caliente y se acompaña con queso fresco, cuajada o mantequilla. Perfecta para el desayuno o la cena.</p>
+          </div>
+        </div>
+
+        <div class="dish-card">
+          <div class="dish-image">🐟</div>
+          <div class="dish-content">
+            <h3 class="dish-title">Trucha de la Región</h3>
+            <p>Trucha fresca criada en las aguas cristalinas de la región, preparada a la plancha, al ajillo o en salsa de almendras. Un manjar que aprovecha los recursos naturales locales.</p>
+          </div>
+        </div>
+
+        <div class="dish-card">
+          <div class="dish-image">🥩</div>
+          <div class="dish-content">
+            <h3 class="dish-title">Longaniza Boyacense</h3>
+            <p>Embutido artesanal elaborado con carne de cerdo, condimentos naturales y especias secretas transmitidas de generación en generación. Se asa al carbón para realzar su sabor.</p>
+          </div>
+        </div>
+
+        <div class="dish-card">
+          <div class="dish-image">🧀</div>
+          <div class="dish-content">
+            <h3 class="dish-title">Queso de Cabra</h3>
+            <p>Queso artesanal elaborado con leche de cabra de la región. De textura cremosa y sabor distintivo, se sirve solo o acompañado de dulce de brevas o mermelada casera.</p>
+          </div>
+        </div>
+
+        <div class="dish-card">
+          <div class="dish-image">🍮</div>
+          <div class="dish-content">
+            <h3 class="dish-title">Cuajada con Melao</h3>
+            <p>Postre tradicional que combina la cuajada fresca con melao de panela. Un dulce sencillo pero delicioso que representa la tradición repostera de la región.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="restaurants">
+        <h2>Restaurantes Recomendados</h2>
+        <div class="restaurant-grid">
+          <div class="restaurant-card">
+            <h3 class="restaurant-name">Casa Blanca Salsamentaria</h3>
+            <p>Especialidad en embutidos artesanales y cocina boyacense tradicional. Ambiente colonial auténtico.</p>
+          </div>
+          <div class="restaurant-card">
+            <h3 class="restaurant-name">Restaurante Zócalo</h3>
+            <p>Cocina internacional con toque local. Ubicado en una hermosa casa colonial frente a la Plaza Mayor.</p>
+          </div>
+          <div class="restaurant-card">
+            <h3 class="restaurant-name">La Galleta</h3>
+            <p>Panadería y café tradicional famoso por sus productos horneados y desayunos boyacenses.</p>
+          </div>
+          <div class="restaurant-card">
+            <h3 class="restaurant-name">Oliva de Creta</h3>
+            <p>Fusión mediterránea con ingredientes locales. Ambiente sofisticado en casa colonial restaurada.</p>
+          </div>
+          <div class="restaurant-card">
+            <h3 class="restaurant-name">Casa Quintero</h3>
+            <p>Cocina gourmet contemporánea con ingredientes regionales. Experiencia gastronómica de alto nivel.</p>
+          </div>
+          <div class="restaurant-card">
+            <h3 class="restaurant-name">Mercado Municipal</h3>
+            <p>Comida callejera auténtica y productos frescos locales. La experiencia más tradicional y económica.</p>
+          </div>
+        </div>
+      </div>
+
+      <h2 style="text-align: center; color: #2c3e50; margin: 2rem 0;">Bebidas Tradicionales</h2>
+
+      <div class="beverages">
+        <div class="beverage-card">
+          <h3>☕ Café de Altura</h3>
+          <p>Café cultivado en las montañas boyacenses, de excelente calidad y sabor único. Perfecto para el clima frío de la región.</p>
+        </div>
+        <div class="beverage-card">
+          <h3>🍺 Chicha de Maíz</h3>
+          <p>Bebida ancestral fermentada elaborada con maíz. De bajo contenido alcohólico y gran valor nutricional y cultural.</p>
+        </div>
+        <div class="beverage-card">
+          <h3>🥛 Masato</h3>
+          <p>Bebida refrescante hecha con arroz, leche y especias. Tradicionalmente se sirve fría y es muy popular entre los locales.</p>
+        </div>
+        <div class="beverage-card">
+          <h3>🍃 Aguapanela</h3>
+          <p>Bebida caliente preparada con panela y agua, a menudo se le agrega limón o jengibre. Perfecta para el clima andino.</p>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

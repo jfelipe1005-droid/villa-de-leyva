@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Villa de Leyva - Patrimonio Cultural de Colombia</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Georgia', serif;
+      line-height: 1.6;
+      color: #333;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: white;
+      box-shadow: 0 0 30px rgba(0,0,0,0.3);
+      min-height: 100vh;
+    }
+
+    header {
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><rect fill="%23d4a574" width="1200" height="400"/><circle fill="%23c69963" cx="200" cy="100" r="50"/><circle fill="%23b8925a" cx="800" cy="150" r="80"/><rect fill="%23a67c00" x="300" y="200" width="600" height="200"/></svg>') center/cover;
+      color: white;
+      text-align: center;
+      padding: 4rem 2rem;
+      position: relative;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(45deg, rgba(218,165,32,0.8), rgba(184,134,11,0.8));
+    }
+
+    header * {
+      position: relative;
+      z-index: 2;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      margin-bottom: 0.5rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+      font-weight: bold;
+    }
+
+    .subtitle {
+      font-size: 1.3rem;
+      opacity: 0.95;
+      font-style: italic;
+    }
+
+    main {
+      padding: 2rem;
+    }
+
+    .hero-image {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      margin-bottom: 2rem;
+    }
+
+    .intro-section {
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      padding: 2rem;
+      border-radius: 15px;
+      margin-bottom: 3rem;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .intro-section h2 {
+      color: #2c3e50;
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .intro-text {
+      font-size: 1.1rem;
+      text-align: justify;
+      columns: 2;
+      column-gap: 2rem;
+      column-rule: 1px solid #ddd;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin: 3rem 0;
+    }
+
+    .stat-card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #e67e22;
+      display: block;
+    }
+
+    .stat-label {
+      color: #7f8c8d;
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+    }
+
+    .highlights {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+
+    .highlight-card {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 2rem;
+      border-radius: 15px;
+      text-align: center;
+    }
+
+    .highlight-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .highlight-card p {
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+
+    .navigation {
+      background: #34495e;
+      padding: 2rem;
+      border-radius: 15px;
+      margin: 3rem 0;
+    }
+
+    .navigation h3 {
+      color: white;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+    }
+
+    .nav-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .nav-link {
+      background: #3498db;
+      color: white;
+      padding: 1rem;
+      text-decoration: none;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .nav-link:hover {
+      background: #2980b9;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      background: #2c3e50;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    footer h3 {
+      margin-bottom: 1rem;
+    }
+
+    .developers {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .developer {
+      background: rgba(255,255,255,0.1);
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+      
+      .intro-text {
+        columns: 1;
+      }
+      
+      header {
+        padding: 2rem 1rem;
+      }
+      
+      main {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Villa de Leyva</h1>
+      <p class="subtitle">Patrimonio Histórico y Cultural de Colombia</p>
+    </header>
+
+    <main>
+      <img src="./assets/img/Villa_De_Leyva.jpg" alt="Plaza Mayor de Villa de Leyva" class="hero-image">
+
+      <div class="intro-section">
+        <h2>Un Tesoro Colonial en el Corazón de Boyacá</h2>
+        <div class="intro-text">
+          Villa de Leyva, ubicada en el departamento de Boyacá a 2.149 metros sobre el nivel del mar, es uno de los destinos más encantadores de Colombia. Fundada en 1572 por Hernán Suárez de Villalobos, esta ciudad colonial ha preservado magistralmente su arquitectura original, convirtiéndose en un museo viviente de la época virreinal.
+
+          Su Plaza Mayor, con 14.000 metros cuadrados, es una de las más grandes de América Latina y constituye el corazón de esta ciudad declarada Monumento Nacional en 1954. Las calles empedradas, las casas coloniales con balcones de madera tallada y los techos de teja de barro crean un ambiente único que transporta a los visitantes al siglo XVI.
+
+          El municipio cuenta con aproximadamente 17.000 habitantes y se ha convertido en un importante centro turístico que combina historia, cultura, naturaleza y gastronomía. Su clima templado, con temperaturas entre 18°C y 24°C, lo convierte en un destino ideal durante todo el año.
+
+          La economía local se basa principalmente en el turismo, la agricultura y la ganadería, con especial énfasis en productos lácteos y artesanías. Villa de Leyva es también un importante centro académico y cultural, que alberga numerosos museos, galerías de arte y espacios culturales que enriquecen la experiencia de residentes y visitantes.
+        </div>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-number">1572</span>
+          <p class="stat-label">Año de Fundación</p>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">14,000</span>
+          <p class="stat-label">m² de la Plaza Mayor</p>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">2,149</span>
+          <p class="stat-label">Metros sobre el nivel del mar</p>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">17,000</span>
+          <p class="stat-label">Habitantes aproximados</p>
+        </div>
+      </div>
+
+
+
+      <div class="navigation">
+        <h3>Explora Villa de Leyva</h3>
+        <div class="nav-grid">
+          <a href="pages/history.html" class="nav-link">📚 Historia</a>
+          <a href="pages/gastronomy.html" class="nav-link">🍽️ Gastronomía</a>
+          <a href="pages/tourism.html" class="nav-link">🏛️ Turismo</a>
+          <a href="pages/festivities.html" class="nav-link">🎉 Festividades</a>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <h3>Desarrolladores</h3>
+      <div class="developers">
+        <div class="developer">Juan Felipe Pachón</div>
+        <div class="developer">Daniel Estiven Ramírez</div>
+      </div>
+      <p style="margin-top: 1rem; opacity: 0.8;">DEVOPS USTA Tunja - 2024</p>
+    </footer>
+  </div>
+</body>
+</html>

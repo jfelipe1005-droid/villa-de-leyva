@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Historia de Villa de Leyva</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Georgia', serif;
+      line-height: 1.6;
+      color: #333;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: white;
+      box-shadow: 0 0 30px rgba(0,0,0,0.3);
+      min-height: 100vh;
+    }
+
+    header {
+      background: linear-gradient(rgba(139,69,19,0.8), rgba(160,82,45,0.8)), 
+                  url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300"><rect fill="%23d2691e" width="1200" height="300"/><rect fill="%23cd853f" x="100" y="50" width="200" height="200"/><rect fill="%23daa520" x="400" y="80" width="150" height="140"/><rect fill="%23b8860b" x="700" y="60" width="180" height="180"/></svg>') center/cover;
+      color: white;
+      padding: 3rem 2rem;
+      text-align: center;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+
+    .back-btn {
+      position: absolute;
+      top: 2rem;
+      left: 2rem;
+      background: rgba(255,255,255,0.2);
+      color: white;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      border-radius: 25px;
+      transition: background 0.3s ease;
+    }
+
+    .back-btn:hover {
+      background: rgba(255,255,255,0.3);
+    }
+
+    main {
+      padding: 2rem;
+    }
+
+    .timeline {
+      position: relative;
+      margin: 2rem 0;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: linear-gradient(to bottom, #e67e22, #d35400);
+      transform: translateX(-50%);
+    }
+
+    .timeline-item {
+      margin-bottom: 3rem;
+      position: relative;
+    }
+
+    .timeline-content {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      width: 45%;
+      position: relative;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-content {
+      margin-left: auto;
+      margin-right: 5%;
+    }
+
+    .timeline-item:nth-child(even) .timeline-content {
+      margin-left: 5%;
+    }
+
+    .timeline-date {
+      background: #e67e22;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 25px;
+      font-weight: bold;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+
+    .timeline-title {
+      font-size: 1.5rem;
+      color: #2c3e50;
+      margin-bottom: 1rem;
+    }
+
+    .hero-section {
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      padding: 2rem;
+      border-radius: 15px;
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+
+    .hero-section h2 {
+      color: #2c3e50;
+      margin-bottom: 1rem;
+    }
+
+    .personalities {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+
+    .personality-card {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 2rem;
+      border-radius: 15px;
+      text-align: center;
+    }
+
+    .personality-card h3 {
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+
+    @media (max-width: 768px) {
+      .timeline::before {
+        left: 2rem;
+      }
+
+      .timeline-content {
+        width: calc(100% - 4rem);
+        margin-left: 4rem !important;
+        margin-right: 1rem !important;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      header {
+        padding: 2rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a href="../index.html" class="back-btn">← Volver</a>
+      <h1>📚 Historia de Villa de Leyva</h1>
+      <p>Un viaje a través de más de 450 años de historia</p>
+    </header>
+
+    <main>
+      <div class="hero-section">
+        <h2>Cuna de la Historia Colonial Colombiana</h2>
+        <p>Villa de Leyva es uno de los conjuntos arquitectónicos coloniales mejor conservados de América, testigo silencioso de momentos cruciales en la historia de Colombia y del continente.</p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <div class="timeline-date">1572</div>
+            <h3 class="timeline-title">Fundación de Villa de Leyva</h3>
+            <p>Hernán Suárez de Villalobos funda la villa el 12 de junio de 1572, bautizándola como "Villa de Santa María de Leyva" en honor al primer presidente de la Real Audiencia del Nuevo Reino de Granada, don Andrés Díez Venero de Leyva.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <div class="timeline-date">1580-1650</div>
+            <h3 class="timeline-title">Consolidación Colonial</h3>
+            <p>Se construyen las principales edificaciones que aún perduran: la Iglesia Parroquial, el Convento de San Agustín, y las casas señoriales que rodean la Plaza Mayor. La villa se convierte en un importante centro administrativo y religioso.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <div class="timeline-date">1819</div>
+            <h3 class="timeline-title">Independencia y República</h3>
+            <p>Durante las guerras de independencia, Villa de Leyva fue escenario de importantes eventos. Antonio Nariño fue recluido en la Casa del Primer Congreso, y la villa fue testigo del paso de las tropas libertadoras.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <div class="timeline-date">1954</div>
+            <h3 class="timeline-title">Monumento Nacional</h3>
+            <p>El gobierno colombiano declara a Villa de Leyva como Monumento Nacional, reconociendo la importancia de preservar su arquitectura colonial única e incomparable valor histórico.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <div class="timeline-date">1960-2000</div>
+            <h3 class="timeline-title">Renacimiento Cultural</h3>
+            <p>Villa de Leyva se transforma en un importante centro cultural y turístico, atrayendo artistas, escritores e intelectuales. Se establecen numerosos museos y espacios culturales.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <div class="timeline-date">Siglo XXI</div>
+            <h3 class="timeline-title">Patrimonio Viviente</h3>
+            <p>Hoy, Villa de Leyva es reconocida internacionalmente como uno de los patrimonios coloniales mejor conservados de América, combinando historia, cultura y turismo sostenible.</p>
+          </div>
+        </div>
+      </div>
+
+      <h2 style="text-align: center; color: #2c3e50; margin: 3rem 0 2rem;">Personajes Históricos Ilustres</h2>
+
+      <div class="personalities">
+        <div class="personality-card">
+          <h3>Antonio Nariño</h3>
+          <p>Precursor de la independencia colombiana, fue recluido en Villa de Leyva entre 1813 y 1820. La casa donde estuvo preso es hoy un importante museo histórico.</p>
+        </div>
+
+        <div class="personality-card">
+          <h3>José Celestino Mutis</h3>
+          <p>El célebre naturalista y médico español realizó importantes estudios botánicos en los alrededores de Villa de Leyva, contribuyendo a la Real Expedición Botánica.</p>
+        </div>
+
+        <div class="personality-card">
+          <h3>Luis de Lugo y Albarracín</h3>
+          <p>Uno de los primeros habitantes ilustres de la villa, construyó una de las casas señoriales más importantes que aún se conserva en la Plaza Mayor.</p>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
